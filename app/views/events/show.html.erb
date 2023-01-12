@@ -1,0 +1,20 @@
+<h1>Name : <%= @event.name %></h1>
+
+<p>Event Type : <%= @event.event_type %></p>
+<p>Venue : <%= @event.venue %></p>
+<p>Start date : <%= @event.start_date %></p>
+<p>End date : <%= @event.end_time %></p>
+<p>total duration : <%= @event.total_duration %></p>
+<p>Event paid or not : <%= @event.is_paid %></p>
+<p>Description : <%= @event.description %></p>
+
+
+<ul>
+  <li><%= link_to 'update info.', edit_event_path(@event) %></li>
+  <li><%= link_to "Destroy", event_path(@event), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+  <li><%= link_to 'back', events_path %></li>
+</ul>
+

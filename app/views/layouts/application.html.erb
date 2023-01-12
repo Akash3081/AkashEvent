@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fsvs/1.2.2/js/bundle.min.js"></script>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "application.bootstrap", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
+    <%= render "shared/navbar" %>
+    <%#= render "shared/khoofiya" %>
+    <%#= render "shared/header" %>
     <%= yield %>
+    <%#= render "shared/footer" %>
   </body>
 </html>

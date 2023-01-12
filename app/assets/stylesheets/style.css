@@ -1,0 +1,30 @@
+body{
+  background-image:url("pho.jpg") ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@import "bootstrap";
+    
+img{
+    position:relative;
+
+}
+h1{
+    color:slategrey;
+    position:absolute;
+    top:4%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+h5{
+    color:white;
+    position:absolute;
+    top:9%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.para{
+    position:absolute;
+    top:9%;
+    left:15%;
+}

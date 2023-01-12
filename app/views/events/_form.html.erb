@@ -1,0 +1,47 @@
+<%= form_with model: @event do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+    <div>
+    <%= form.label :venue %><br>
+    <%= form.select :venue, ['convention center', 'confrence hall', 'hotel', 'restaurants', 'resort', 'Breweries and wineries', 'Bars and nightclubs', 'Golf courses', 'Social clubs and lounges', 'Community centers', 'Museums, aquariums, and zoos', 'Art galleries', 'Historical and cultural estates', 'Theaters', ' Colleges and universities', 'Retreat centers', 'Cruise ships', 'Stadiums', 'other'] %>
+  </div>
+
+  <div>
+    <%= form.label :event_type %><br>
+    <%= form.select :event_type, ['Corporate off-sites & executive meetings', 'seminars', 'confrences', 'trade shows', 'Company parties', 'product launch', 'birthday', 'marriage', 'get together', 'reception', 'other'] %>
+  </div>
+
+    <div>
+    <%= form.label :start_date %><br>
+    <%= form.date_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.label :end_time %><br>
+    <%= form.date_field :end_time %>
+  </div>
+
+  <div>
+    <%= form.label :total_duration %><br>
+    <%= form.time_field :total_duration %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :is_paid %><br>
+    <%= form.check_box :is_paid %>
+  </div>
+
+
+  <div>
+    <%= form.submit %>
+    <%= link_to 'back', :back %>
+  </div>
+<% end %>
