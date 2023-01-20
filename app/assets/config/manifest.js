@@ -3,3 +3,4 @@
 //= link_tree ../../../vendor/javascript .js
 //= link_tree ../builds
 //= link style.css
+//= link style1.css
