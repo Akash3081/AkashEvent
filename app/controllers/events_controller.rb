@@ -13,7 +13,11 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
+    # if current_user.present?
+     @event = Event.new
+   # else
+    # render :error, status: :unprocessable_entity
+  # end
   end
 
   def create
