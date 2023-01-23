@@ -5,7 +5,11 @@ class EventsController < ApplicationController
   end
   
   def show
-    @event = Event.find(params[:id])
+    if current_user.present?
+      @event = Event.find(params[:id])
+    else
+      render :error, status: :unprocessable_entity
+    end
   end
 
   def new
